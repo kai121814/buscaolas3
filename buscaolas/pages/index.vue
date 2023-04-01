@@ -8,6 +8,7 @@
                 </p>
             </div>
             
-        </client-only>        
+        </client-only>    
+        <Footer />    
     </div>
 </template>
