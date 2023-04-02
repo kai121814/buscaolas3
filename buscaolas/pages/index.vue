@@ -60,11 +60,6 @@
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-            
-        </client-only>    
-        <Footer />    
-=======
             <div
               class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
               data-te-carousel-item
@@ -188,7 +183,6 @@
           far, in reverse chronological order.
         </p>
       </a>
->>>>>>> d87f13c53d69c3bf5851c4bc42d36d4293644b64
     </div>
     <div class="border">
       <img
