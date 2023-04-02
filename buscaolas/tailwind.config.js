@@ -24,7 +24,9 @@ module.exports = {
         'topgr': '#1C496B',
         'botgr': '#00A99D',
         'orangee': '#FFA800',
-      },
+        'skyblue':'#00A99D',
+
+      }
     },
   },
   plugins: [],

@@ -1,3 +1,7 @@
+<script setup>
+const club = [1, 2, 3, 4, 5, 6, 7, 8];
+</script>
+
 <template>
   <div>
     <div class="overflow-x-hidden">
@@ -159,106 +163,57 @@
         </div>
       </client-only>
     </div>
-    <div
-      class="head pl-1 uppercase mx-auto w-11/12 pt-10 text-4xl font-bold text-headblue"
-    >
-      <h1>CáMARAS</h1>
-      <h1>Y SURF FORECAST</h1>
-    </div>
-    <div class="grid grid-cols-3 gap-5 mx-auto w-11/12 pt-6 pb-6">
-      <div class="border">
+
+    <div class="grid grid-cols-3 gap-5 mx-auto w-11/12 pt-8 pb-8">
+      <div class="border" v-for="(c, i) in club" :key="i">
         <img
           src="~/assets/thumbnails/image.jpg"
           class="object-cover h-48 w-full ..."
         />
         <a
           href="#"
-          class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block w-full p-6 bg-white border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
         >
           <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center pb-2"
           >
-            Noteworthy technology acquisitions 2021
+            ESCUELA TURIMOS LOS LOBOS
           </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </a>
-      </div>
-      <div class="border">
-        <img
-          src="~/assets/thumbnails/image.jpg"
-          class="object-cover h-48 w-full ..."
-        />
-        <a
-          href="#"
-          class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
-        </a>
-      </div>
-      <div class="border">
-        <img
-          src="~/assets/thumbnails/image.jpg"
-          class="object-cover h-48 w-full ..."
-        />
-        <a
-          href="#"
-          class="block w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
-        >
-          <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
-            Noteworthy technology acquisitions 2021
-          </h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">
-            Here are the biggest enterprise technology acquisitions of 2021 so
-            far, in reverse chronological order.
-          </p>
+
+          <div class="flex justify-center">
+            <button
+              class="text-skyblue font-bold py-2 px-4 border border-skyblue uppercase"
+            >
+              B e n e f i c i o s
+            </button>
+          </div>
         </a>
       </div>
     </div>
-    <div
-      class="grid grid-cols-3 gap-5 bg-gradient-to-br from-blue-900 to-teal-500 text-white"
-    >
-      <div class="bor-im pl-20 pt-14 pb-8">
+
+    <div class="flex bg-gradient-to-br from-blue-900 to-teal-500 text-white">
+      <div class="lg:w-5/12">
         <img
-          src="~/assets/icons/unete.png"
+          src="~/assets/thumbnails/club-surf.png"
           class="object-cover h-auto w-auto"
         />
-        <img src="~/assets/icons/club.png" class="object-cover h-auto w-auto" />
       </div>
-      <div class="lorem pl-0 pt-14 pb-8 text-3xl">
-        <p>
-          <span class="font-bold"
-            >Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.</span
-          >
-          Lorem Ipsum is simply dummy text.
+      <div class="lg:w-7/12 pl-10 pr-96 pt-14 pb-6 text-3xl">
+        <p class="w-7/12">
+          <span class="font-bold">¿QUIERES SER PARTE DEL CLUB BUSCAOLAS? </span>
         </p>
-      </div>
-      <div class="button flex items-center uppercase pl-20">
-        <button
-          class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 border border-orange-700 uppercase"
-        >
-          B e n e f i c i o s
+
+        <p class="uppercase text-2xl pt-2">
+          <span class="font-bold">¡Únete</span> y muestrate a miles de usuarios!
+        </p>
+        <div class="button flex items-center uppercase">
+        <button class="bg-orangee text-white border border-orangee uppercase text-sm p-2 px-8 font-bold" style="letter-spacing: 0.25em;">
+          Contacto
         </button>
+        </div>
+
+        
       </div>
-    </div>
-    <div>
-      <img
-        src="~/assets/thumbnails/imagetwo.png"
-        class="object-cover h-auto w-auto"
-      />
     </div>
   </div>
 </template>
