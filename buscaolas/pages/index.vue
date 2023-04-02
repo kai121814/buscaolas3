@@ -1,6 +1,6 @@
 <template>
-  <div class="overflow-x-hidden">
-    <client-only>
+<div>
+    <div class="overflow-x-hidden">
       <Header />
       <div class="mx-auto w-11/12">
         <div
@@ -155,7 +155,7 @@
           </button>
         </div>
       </div>
-    </client-only>
+
   </div>
   <div
     class="head pl-1 uppercase mx-auto w-11/12 pt-10 text-4xl font-bold text-headblue"
@@ -245,4 +245,5 @@
   <div>
     <img src="~/assets/thumbnails/imagetwo.png" class="object-cover h-auto w-auto" />
   </div>
+</div>
 </template>
