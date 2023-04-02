@@ -24,6 +24,7 @@ module.exports = {
         'topgr': '#1C496B',
         'botgr': '#00A99D',
         'orangee': '#FFA800',
+        'pastel' : '#FF5733',
       },
     },
   },
