@@ -13,13 +13,36 @@
                                 <img src="~/assets/icons/Button1.png">
                             </NuxtLink>   
                         </div>
-                        <div class="w-full flex">
-                             <button class="border-inherit text-center">VOLVER</button>
+                        <div class="w-full flex mx-auto">
+                             <button type="button" class="font-bold text-center bg-white text-black mx-auto">VOLVER</button>
+                             <button type="button" class="text-center bg-white text-red-500 mx-auto">CERRAR SESIÓN</button>
                         </div>                
                     </div>
                 </div>
                 <div class="flex mx-auto w-9/12">
-                    Text
+                    <div class="flex mx-auto w-full">
+                        <div class="w-full flex lg:py-7 py-10">
+                            <div>
+                                <form action="/" class="w-full">
+                                    <p class="font-bold uppercase">cambiar contraseña</p>
+                                    <div>
+                                        <input class="w-full" type="actual-contraseña" id="actual-contraseña" name="actual-contraseña" value="actual-contraseña"><br>
+                                    </div>
+                                    <div>
+                                        <input type="text" id="lname" name="lname" value="Doe">
+                                    </div>
+                                    <div>
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                    
+                                </form> 
+                            </div>  
+                        </div>
+                        <div class="w-full flex mx-auto">
+                             <button type="button" class="font-bold text-center bg-white text-black mx-auto">VOLVER</button>
+                             <button type="button" class="text-center bg-white text-red-500 mx-auto">CERRAR SESIÓN</button>
+                        </div>                
+                    </div>
                 </div>
             </div>
         </ClientOnly>
