@@ -3,7 +3,6 @@
 
 <template>
     <Header />
-        <ClientOnly>
             <div class="bg-neutral-200">
                 <div class="bg-white drop-shadow-xl">
                     <div class="flex mx-auto w-9/12">
@@ -42,5 +41,4 @@
                     </div>
                 </div>
             </div>
-        </ClientOnly>
 </template>
