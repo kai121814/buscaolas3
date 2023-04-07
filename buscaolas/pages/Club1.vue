@@ -172,10 +172,10 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
         />
         <a
           href="#"
-          class="block w-full p-6 bg-white border border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+          class="block w-full p-6" style="background-color: #F0F0F0;"
         >
           <h5
-            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center pb-2"
+            class="mb-2 text-2xl font-bold tracking-tight text-dark-grey text-center pb-2"
           >
             ESCUELA TURIMOS LOS LOBOS
           </h5>
