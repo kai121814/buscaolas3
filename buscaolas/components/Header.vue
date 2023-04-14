@@ -85,14 +85,14 @@
                     <li class="lg:py-0 pt-2.5 pb-2.5 lg:border-0 border-b border-white">
                         <span class="nav">
                         <NuxtLink to="/" class="font-bold lg:pt-2.5 lg:h-10 block">
-                            Puertos
+                            Nosotros
                         </NuxtLink>
                         </span>
                     </li>
                     <li class="lg:py-0 pt-2.5">
                         <span class="nav">
                         <NuxtLink to="/" class="font-bold lg:pt-2.5 lg:h-10 block">
-                            cONTACTO
+                            CONTACTO
                         </NuxtLink>
                         </span>
                     </li>
