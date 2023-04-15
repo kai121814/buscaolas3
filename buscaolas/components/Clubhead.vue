@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .leftblue {
   width: 180px;
   border-radius: 100px 0px 0px 0px;
