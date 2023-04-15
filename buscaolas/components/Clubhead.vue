@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div class="flex lg:h-80">
+  <div class="flex h-80">
     <div class="leftblue bg-gradient-to-br from-headblue to-botgr">
     </div>
 
@@ -13,8 +13,11 @@
       <p>ESCUELA DE SURF MAITENCILLO</p>
     </div>
 
+
     <div>
-      <img src="~/assets/thumbnails/contacto-surf.png" class="h-80 w-full image" />
+      <NuxtLink to="/">
+      <img src="~/assets/thumbnails/contacto-surf.png" class="h-80 image" />
+    </NuxtLink>
     </div>
 
     <div class="rightblue bg-gradient-to-br from-headblue to-botgr">
