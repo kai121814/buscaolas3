@@ -37,6 +37,7 @@
         
     </div>
         <Contactofoot/>
+        <Footer/>
     </div>
   </template>
   

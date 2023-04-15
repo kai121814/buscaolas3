@@ -14,7 +14,7 @@
     </div>
 
     <div>
-      <img src="~/assets/thumbnails/contacto-surf.png" class="object-cover h-full w-full image" />
+      <img src="~/assets/thumbnails/contacto-surf.png" class="h-80 w-full image" />
     </div>
 
     <div class="rightblue bg-gradient-to-br from-headblue to-botgr">
