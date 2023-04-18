@@ -28,12 +28,12 @@
                 </div>
             </div>
 
-            <div class="flex justify-center mx-auto w-full pb-12">
+            <div class="flex justify-center mx-auto pb-12">
                 <div>
-                    <img src="~assets/thumbnails/beachmap.png" alt="beach">
+                    <img class="w-full" src="~assets/thumbnails/beachmap.png" alt="beach">
                 </div>
                 <div>
-                    <img src="~assets/thumbnails/beachmap.png" alt="beach">
+                    <img class="w-full" src="~assets/thumbnails/beachmap.png" alt="beach">
                 </div>
             </div>
 
@@ -124,29 +124,87 @@
                 <p class="text-[#1C496B] uppercase font-bold">Indicadores por nivel</p>
                 <div class="py-5 w-10/12">
                     <div class="grid grid-cols-6 gap-x-1 gap-y-4">
-  <div class="font-bold">Principiante</div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="font-bold">Principiante</div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
 
-  <div class="font-bold">Intermedio</div>
-  <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
-  <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="font-bold">Intermedio</div>
+                        <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
+                        <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
 
-  <div class="font-bold">Avanzado</div>
-  <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
-  <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
-  <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-  <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
-</div>
+                        <div class="font-bold">Avanzado</div>
+                        <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
+                        <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
+                        <div class="bg-blue-600 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                        <div class="bg-gray-200 w-14 h-6 rounded-full"></div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="grid grid-cols-1 w-9/12 mx-auto justify-center">
+            <img class="mx-auto" src="~assets/thumbnails/tides.png" alt="tides">
+            <img class="mx-auto" src="~assets/thumbnails/mareas.png" alt="mareas">
+        </div>
+        <hr class="w-9/12 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
+        <div class="grid grid-cols-2 gap-x-4 mx-auto w-9/12 pb-5">
+            <div>
+                <div >
+                    <p class="font-bold text-3xl text-[#1C496B] uppercase">Reporte de la región</p>
+                    <iframe width="500" height="300" src="https://www.youtube.com/embed/1HZaBYXRc8s"
+                        title="Whitewoods - Somber Waves" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <img  class="pt-5" src="~assets/thumbnails/like.png" alt="like">   
+                </div>
             </div>
+            <div>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+
+                PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+                </p>
+                <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+
+                PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book.
+                </p>  
+            </div>
+        </div>
+
+        <div class="w-9/12 mx-auto pb-10">
+            <hr class="h-1 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
+            <p class="font-bold text-3xl text-[#1C496B] uppercase text-center">Reporte semanal</p>
+        </div>
+                <div class="w-9/12 mx-auto item-center">
+                    <img class="mx-auto" src="~assets/thumbnails/semanal.png" alt="semanal">   
+                </div>
+                       
+
+        <div class="w-9/12 mx-auto pb-10">
+        <hr class="h-1 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
+        
+        </div>
+        <div class="w-9/12 mx-auto pb-10">
+            <p class="font-bold text-3xl text-[#1C496B] uppercase">COMENTARIOS DESTACADOS</p>
+            <img class="pb-5" src="~assets/thumbnails/comment.png" alt="comment">
+            <img class="pb-5" src="~assets/thumbnails/comment.png" alt="comment">
+            <img class=" justify-items-end" src="~assets/thumbnails/commentbtn.png" alt="cmtbtn">
         </div>
     </div>
     <Footer />
