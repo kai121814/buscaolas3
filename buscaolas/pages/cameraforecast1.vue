@@ -1,4 +1,40 @@
 <script setup>
+import { ref } from 'vue';
+const items = ref([
+  {
+    question: 'REPORTE Martes',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  {
+    question: 'REPORTE Miércoles',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  {
+    question: 'REPORTE Jueves',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  {
+    question: 'REPORTE Viernes',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  {
+    question: 'REPORTE Sábado',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  {
+    question: 'REPORTE Domingo',
+    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
+    active: false
+  },
+  ]);
+  function toggleActive(index) {
+  items.value[index].active = !items.value[index].active;
+}
 </script>
 <template>
     <div>
@@ -155,35 +191,35 @@
         <hr class="w-9/12 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
         <div class="grid grid-cols-2 gap-x-4 mx-auto w-9/12 pb-5">
             <div>
-                <div >
+                <div>
                     <p class="font-bold text-3xl text-[#1C496B] uppercase">Reporte de la región</p>
                     <iframe width="500" height="300" src="https://www.youtube.com/embed/1HZaBYXRc8s"
                         title="Whitewoods - Somber Waves" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
                     </iframe>
-                    <img  class="pt-5" src="~assets/thumbnails/like.png" alt="like">   
+                    <img class="pt-5" src="~assets/thumbnails/like.png" alt="like">
                 </div>
             </div>
             <div>
                 <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book.
 
-                PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                    PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book.
                 </p>
                 <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book.
 
-                PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-                </p>  
+                    PM: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                    scrambled it to make a type specimen book.
+                </p>
             </div>
         </div>
 
@@ -191,14 +227,38 @@
             <hr class="h-1 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
             <p class="font-bold text-3xl text-[#1C496B] uppercase text-center">Reporte semanal</p>
         </div>
-                <div class="w-9/12 mx-auto item-center">
-                    <img class="mx-auto" src="~assets/thumbnails/semanal.png" alt="semanal">   
-                </div>
-                       
+        <div class="w-9/12 mx-auto item-center">
+            <img class="mx-auto" src="~assets/thumbnails/semanal.png" alt="semanal">
+        </div>
+
+        <div class="paa-container mx-auto w-9/12 pt-5">
+    <ul class="paa-list border-t border-b border-blue-500">
+      <li
+        v-for="(item, index) in items"
+        :key="index"
+        class="paa-item border-t border-blue-500"
+        :class="{
+          'border-t': index > 0,
+          'border-b': index < items.length - 1
+        }"
+      >
+        <div class="paa-question font-bold text-[#1C496B] text-2xl" @click="toggleActive(index)">
+          {{ item.question }}
+        </div>
+        <div
+          ref="answer"
+          class="paa-answer text-[#1C496B] text-2xl"
+          :class="{ block: item.active, hidden: !item.active }"
+        >
+          {{ item.answer }}
+        </div>
+      </li>
+    </ul>
+  </div>
 
         <div class="w-9/12 mx-auto pb-10">
-        <hr class="h-1 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
-        
+            <hr class="h-1 my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-neutral-900">
+
         </div>
         <div class="w-9/12 mx-auto pb-10">
             <p class="font-bold text-3xl text-[#1C496B] uppercase">COMENTARIOS DESTACADOS</p>
@@ -210,4 +270,27 @@
     <Footer />
 </template>
 
-<style></style>
+<style>
+.paa-item.active .paa-answer {
+    display: block;
+}
+
+.paa-list {
+    border-top: 1px solid #1C496B;
+    border-bottom: 2px solid#1C496B;
+}
+
+.paa-item {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.paa-question {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: background-color .25s ease-in-out;
+}
+
+.paa-question:hover {
+    background-color: #ccd9e3;
+}</style>
