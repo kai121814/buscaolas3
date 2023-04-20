@@ -7,18 +7,36 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
     <div class="overflow-x-hidden">
       <client-only>
         <Header />
-        <div class="mx-auto w-11/12">
-          
-        </div>
+          <div class="clubhead flex">
+            <div class="leftblue bg-white">
+            </div>
+
+            <div class="headtext lg:text-3xl uppercase text-textgr font-bold text-left pt-12 pl-36 pr-16">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+
+
+            <div>
+              <NuxtLink to="/">
+              <img src="~/assets/thumbnails/clubsurf1.png" class=" image" />
+            </NuxtLink>
+            </div>
+
+            <div class="rightblue bg-gradient-to-br from-headblue to-botgr">
+            </div>
+          </div>
       </client-only>
     </div>
 
-    <div class="grid grid-cols-3 gap-5 mx-auto w-11/12 pt-8 pb-8">
+    <div class="grid grid-cols-3 gap-5 mx-auto w-9/12 pt-8 pb-8">
       <div class="border" v-for="(c, i) in club" :key="i">
+        <div class="image-container">
         <img
           src="~/assets/thumbnails/image.jpg"
           class="object-cover h-48 w-full ..."
         />
+        <div class="shape bg-white top-14  left-14"> </div>
+      </div>
         <a
           href="#"
           class="block w-full p-6" style="background-color: #F0F0F0;"
@@ -64,10 +82,15 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
         
       </div>
     </div>
+    <Footer/>
   </div>
 </template>
 
-<style>
+<style scoped>
+.clubhead {
+ height: 480px;
+}
+
 .leftblue {
   width: 180px;
   border-radius: 100px 0px 0px 0px;
@@ -81,8 +104,21 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
 .image {
   width: 650px;
   border-radius: 0px 0px 0px 100px;
+  height: 480px;
+}
+
+.shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Add styles for your shape, for example: */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .rightblue {
   width: 183px;
-}</style>
+}
+</style>

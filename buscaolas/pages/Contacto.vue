@@ -23,6 +23,7 @@
             <button
               class="inline-block w-40 h-10 text-sm text-skyblue font-bold border border-skyblue uppercase hover:bg-gray-200" style="letter-spacing: 0.25em;"
             >
+            <img src="~/assets/icons/leftarrowskyblue.png" class="inline-block pr-3">
               Volver
             </button>
 

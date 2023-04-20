@@ -21,7 +21,7 @@
       </div>
 </template>
 
-<style>
+<style scoped>
 .image {
   height:400px;
 }
