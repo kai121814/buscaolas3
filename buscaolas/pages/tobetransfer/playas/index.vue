@@ -127,7 +127,7 @@ export default {
      <div class="">
       <ul class="">
         <li
-          v-for="(list, index) in PlayasData.results"
+        v-for="(list, index) in PlayasData.results"
           :key="index"
           class="
             w-11/12
