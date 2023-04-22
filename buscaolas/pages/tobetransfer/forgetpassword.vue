@@ -1,4 +1,5 @@
-<template>
+// adblocker
+<template> 
     <div class="overflow-x-hidden">
         <Header />
         <div class="relative mx-auto w-full h-full">
