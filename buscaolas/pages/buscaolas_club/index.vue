@@ -33,9 +33,8 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
         <div class="image-container">
         <img
           src="~/assets/thumbnails/image.jpg"
-          class="object-cover h-48 w-full ..."
+          class="object-cover h-48 w-full relative"
         />
-        <div class="shape bg-white top-14  left-14"> </div>
       </div>
         <a
           href="#"
@@ -101,11 +100,6 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8];
   width: 448px;
 }
 
-.image {
-  width: 650px;
-  border-radius: 0px 0px 0px 100px;
-  height: 480px;
-}
 
 .shape {
   position: absolute;
