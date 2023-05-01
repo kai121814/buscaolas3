@@ -1,6 +1,7 @@
 <script setup>
 </script>
 
+
 <template>
     <div>
         <div class="overflow">
@@ -8,7 +9,7 @@
             <Videohead />
         </div>
         <div class="flex justify-center pt-24">
-  <div class="aspect-w-16 aspect-h-9">
+  <div class="w-full aspect-auto">
     <iframe width="1010" height="498"
 src="https://www.youtube.com/embed/1HZaBYXRc8s?autoplay=0&mute=0">
 </iframe>
