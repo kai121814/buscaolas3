@@ -4,8 +4,8 @@
 <template>
     <Header />
     <div class="bg-neutral-200">
-       
-        <div class="flex mx-auto w-9/12">
+
+        <div class="mx-auto w-9/12">
             <div class="flex mx-auto w-full">
                 <!--Left Content-->
                 <div class="w-8/12 h-full">
@@ -22,7 +22,8 @@
 
                     <!--Divider-->
                     <div class="flex ml-0 w-full lg:my-5 ">
-                        <div class="bg-[#1C496B] text-center text-white font-bold lg:w-10 lg:h-10 lg:py-2 rounded-full">AS</div>
+                        <div class="bg-[#1C496B] text-center text-white font-bold lg:w-10 lg:h-10 lg:py-2 rounded-full">AS
+                        </div>
                         <p class="lg:py-2 ml-2 uppercase">por <span class="font-bold">Alejandro Santibañes</span></p>
                     </div>
 
@@ -31,25 +32,26 @@
                         <p class="text-3xl uppercase font-bold">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                         </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                            It has survived not only five centuries, but also the leap into electronic typesetting, 
-                            remaining essentially unchanged. It was popularised in the 1960s with the release of 
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
                             Letraset sheets containing Lorem Ipsum passages, and more recently with d
                         </p>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                            when an unknown printer took a galley of type and scrambled it to make a type 
-                            specimen book. It has survived not only five centuries, but also the leap into 
-                            electronic typesetting, remaining essentially unchanged. It was popularised in 
-                            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                            and more recently with desktop publishing software like Aldus PageMaker including 
-                            versions of Lorem Ipsum.esktop publishing software like Aldus PageMaker including 
-                            versions of Lorem Ipsum. <span class="underline text-[#00A99D]"><a href="">Link format</a></span> 
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and scrambled it to make a type
+                            specimen book. It has survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essentially unchanged. It was popularised in
+                            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                            and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.esktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum. <span class="underline text-[#00A99D]"><a href="">Link
+                                    format</a></span>
                         </p>
-                        
+
                         <div class="ml-0 w-full lg:my-5 ">
                             <div class="h-40 w-full bg-gray-400">
                                 <!--Image Gallery-->
@@ -57,7 +59,7 @@
                         </div>
                     </div>
 
-                    
+
 
                     <!--Third Content-->
                     <div class="w-11/12 lg:my-15">
@@ -66,43 +68,65 @@
                                 <!--Image Gallery-->
                             </div>
                             <p class="my-14">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type 
-                                specimen book. It has survived not only five centuries, but also the leap 
-                                into electronic typesetting, remaining essentially unchanged. 
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type
+                                specimen book. It has survived not only five centuries, but also the leap
+                                into electronic typesetting, remaining essentially unchanged.
                             </p>
-                            <div>
-                                <div>
-                                    <p>ES BUENO</p>
-                                    <p>compartir ></p>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
 
-                    <!--Horizontal Divider-->
-                    <div class="border-2 border-t-zinc-700 w-11/12 lg:mr-10 mt-0"></div>
                     
                 </div>
-
                 <!--Vertical Divider-->
                 <div class="border-2 border-r-zinc-500 lg:h-11/12 mx-auto lg:my-16"></div>
 
                 <!--Right Content-->
                 <div class="w-4/12 lg:ml-10 h-full">
+                    <div class="ml-0 w-full lg:mt-16 lg:mb-5 ">
+                        <p class="uppercase text-[#1C496B] font-bold text-5xl">Últimos Artículos </p>
+                    </div>
 
-                   
                 </div>
 
             </div>
+            <div>
+                <div>
+                    <div class="flex">
+                        <div class="uppercase mr-5">
+                            <p class="my-0 font-bold">ES BUENO</p>
+                            <p class="text-sm tracking-widest">c o m p a r t i r ></p>
+                        </div>
+                        <div class="flex lg:my-1">
+                            <NuxtLink to="/" class="block mx-2" v-if="!isAuthenticated">
+                                <img src="~/assets/icons/fb-color.png">
+                            </NuxtLink>
+                            <NuxtLink to="/" class="block mx-2" v-if="!isAuthenticated">
+                                <img src="~/assets/icons/twitter.png">
+                            </NuxtLink>
+                            <NuxtLink to="/" class="block mx-2" v-if="!isAuthenticated">
+                                <img src="~/assets/icons/insta.png">
+                            </NuxtLink>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <button type="button"
+                            class="lg:mt-10 border-2 border-black font-bold text-center bg-white text-black lg:py-1 py-3 lg:w-40 w-48 flex items-center">
+                            <img src="~/assets/icons/Flecha_der.png" alt="Arrow icon" class="ml-2">
+                            <span class="mx-auto">VOLVER</span>
+                        </button>
+                    </div>
+                    <!--Horizontal Divider-->
+                    <div class="border-2 border-t-zinc-700 w-full lg:mr-10 mt-0 lg:my-20"></div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <Footer />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
