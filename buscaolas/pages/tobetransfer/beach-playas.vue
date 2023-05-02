@@ -23,17 +23,15 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
            2021
            </span>
           </div>
-    <p class="lg:text-4xl uppercase text-headblue font-black tracking-widest mt-5">headline <br> playas</p>
-    <div class="text-textgr mt-8 uppercase font-normal">
-    <span class="text-base font-bold pl-24">F i l t r a r  </span> 
-    <span class="break-words">p o r</span> <br>
+      <p class="lg:text-4xl uppercase text-headblue font-black tracking-widest mt-8">mis playas</p>
+      
+      <div class="flex mt-14">
             <button
-              class="py-2 pl-14 w-80 mt-2 bg-inputgr uppercase"
+              class="text-white font-bold py-2 px-4 uppercase w-72 bg-orangee"
             >
-            F a v o r i t o s
-            <img src="~/assets/icons/downarrow.png" class="inline-block pl-20">
+            Ver en HD
             </button>
-        </div>
+            </div>
     </div>
 
 
@@ -59,17 +57,7 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
           src="~/assets/thumbnails/image.jpg"
           class="object-cover h-48 w-full ..."
         />
-      <!-- <div class="relative">
-      <div class="absolute flex object-right">
-                <span class="text-white uppercase title pl-3 pt-1">
-                  <span class="block font-bold text1">{{list.nombre}}</span>
-                </span>
-                <span class="float-right pt-2 pr-3 ">
-                  <img src="~/assets/icons/star.png" />
-                </span>
-              </div>
-            </div> -->
-        </div>
+      </div>
     </div>
 
     <Footer/>

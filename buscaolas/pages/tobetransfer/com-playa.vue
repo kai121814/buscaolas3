@@ -1,5 +1,4 @@
 <script setup>
-const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 </script>
 
 <template>
@@ -23,7 +22,8 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
            2021
            </span>
           </div>
-    <p class="lg:text-4xl uppercase text-headblue font-black tracking-widest mt-5">headline <br> playas</p>
+    <p class="lg:text-4xl uppercase text-headblue font-black tracking-widest mt-5">playa <br> maintecillo</p>
+    <p class="text-sm text-headblue uppercase font-normal tracking widest">(ABANICO)</p>
     <div class="text-textgr mt-8 uppercase font-normal">
     <span class="text-base font-bold pl-24">F i l t r a r  </span> 
     <span class="break-words">p o r</span> <br>
@@ -39,7 +39,7 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     <div>
       <NuxtLink to="/">
-      <img src="~/assets/thumbnails/playasurf.png" class="h-80 image" />
+      <img src="~/assets/thumbnails/contacto-surf.png" class="h-80 image" />
     </NuxtLink>
     </div>
 
@@ -51,25 +51,6 @@ const club = [1, 2, 3, 4, 5, 6, 7, 8, 9];
           
         </div>
       </client-only>
-    </div>
-
-    <div class="grid grid-cols-3 gap-5 mx-auto w-9/12 mt-16 mb-16">
-      <div class="border" v-for="(c, i) in club" :key="i">
-        <img
-          src="~/assets/thumbnails/image.jpg"
-          class="object-cover h-48 w-full ..."
-        />
-      <!-- <div class="relative">
-      <div class="absolute flex object-right">
-                <span class="text-white uppercase title pl-3 pt-1">
-                  <span class="block font-bold text1">{{list.nombre}}</span>
-                </span>
-                <span class="float-right pt-2 pr-3 ">
-                  <img src="~/assets/icons/star.png" />
-                </span>
-              </div>
-            </div> -->
-        </div>
     </div>
 
     <Footer/>
