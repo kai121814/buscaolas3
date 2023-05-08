@@ -27,7 +27,6 @@ module.exports = {
         'skyblue':'#00A99D',
         'teal' : '#008080',
         'midgrey' : '#F0F0F0',
-        'dark-grey' : '#3C3C3B',
         'dblue' : '#557790',
         'textgr': '#3C3C3B',
         'inputgr': '#E5E5E5',
