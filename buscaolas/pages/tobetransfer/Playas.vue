@@ -46,9 +46,6 @@ const isOpen = ref(false);
             </div>
           </div>
         </div>
-        <div class="mx-auto w-11/12">
-
-        </div>
       </client-only>
     </div>
 
@@ -65,47 +62,6 @@ const isOpen = ref(false);
                 </span>
               </div>
             </div> -->
-      </div>
-    </div>
-
-    <div class="w-full mx-auto justify-center">
-      <button @click="isOpen = true">Register</button>
-      <div v-if="isOpen" class="modal">
-        <div class="modal-content">
-          <span class="close" @click="isOpen = false">&times;</span>
-          <div>
-            <img src="~/assets/thumbnails/contacto-surf.png" alt="surf">
-          </div>
-
-          <div class="bg-gradient-to-br from-[#1C496BE5] to-[#00A99DE5]">
-            <div class="text-white pt-8">
-              <div class="text-6xl uppercase "> REGISTRATE y hazte premium </div>
-              <span class="text-3xl"><span class="underline underline-offset-8 decoration-4"> Para que</span> cada sesión
-                valga la pena</span>
-            </div>
-            <form class="mx-auto w-full">
-              <div>
-                <input class="bg-white placeholder-black w-1/3 uppercase text-center py-2 lg:mt-0 lg:mb-10" type="text"
-                  id="Ingresa el código acá" name="Ingresa el código acá" placeholder="Ingresa el código acá">
-              </div>
-              <div>
-                <input class="bg-white placeholder-black w-1/3 uppercase text-center py-2 lg:mt-0 lg:mb-10" type="text"
-                  id="Ingresa el código acá" name="Ingresa el código acá" placeholder="Ingresa el código acá">
-              </div>
-              <div>
-                <input class="bg-white placeholder-black w-1/3 uppercase text-center py-2 lg:mt-0 lg:mb-10" type="text"
-                  id="Ingresa el código acá" name="Ingresa el código acá" placeholder="Ingresa el código acá">
-              </div>
-              <div>
-                <input class="bg-white placeholder-black w-1/3 uppercase text-center py-2 lg:mt-0 lg:mb-10" type="text"
-                  id="Ingresa el código acá" name="Ingresa el código acá" placeholder="Ingresa el código acá">
-              </div>
-              <div>
-                <button type="submit">Register</button>
-              </div>
-            </form>
-          </div>
-        </div>
       </div>
     </div>
     <Footer />
@@ -132,39 +88,5 @@ const isOpen = ref(false);
   width: 183px;
 }
 
-.form-group {
-  margin-bottom: 10px;
-}
 
-.modal {
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-  background-color: white;
-  margin: auto;
-  justify-content: center;
-  border: 1px solid #888;
-  width: 65%;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
 </style>
