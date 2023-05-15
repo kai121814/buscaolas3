@@ -98,7 +98,7 @@
       <button class="mx-auto my-10 block text-sm uppercase underline text-brown">
         Cargar más COMENTARIOS
       </button>
-      <button class="mx-auto block rounded-sm border border-gray font-bold text-sm uppercase tracking-widest-1 text-gray box-border lg:w-36 lg:h-10 return text-right pr-5 mb-10">VOLVER</button>
+      <button class="mx-auto block rounded-sm border border-gray font-bold text-sm uppercase tracking-widest-1 text-gray box-border lg:w-36 lg:h-10 text-right pr-5 mb-10">VOLVER</button>
     </div>
     <Footer/>
   </div>
