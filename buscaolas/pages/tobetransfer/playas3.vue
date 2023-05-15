@@ -1,4 +1,108 @@
 <script setup>
+const club = [
+  {
+    title: 'regular',
+    time: '9:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'regular',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'buena',
+    time: '10:00',
+    mts: '10:00',
+    mm: '2.96',
+    status: 'buena',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'corre 2 de 10',
+    time: '11:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'corre blue',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'regular',
+    time: '12:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'regular',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'corre 5 de 10',
+    time: '13:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'corre gray',
+    ss: '12',
+    degree: '242',
+  },
+  
+  {
+    title: 'corre 6 de 10',
+    time: '14:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'corre skyblue',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'regular',
+    time: '09:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'regular',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'buena',
+    time: '10:00',
+    mts: '10:00',
+    mm: '2.96',
+    status: 'buena',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'corre 2 de 10',
+    time: '11:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'corre blue',
+    ss: '12',
+    degree: '242',
+    opacity: 60
+  },
+  {
+    title: 'regular',
+    time: '12:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'regular',
+    ss: '12',
+    degree: '242',
+  },
+  {
+    title: 'corre 5 de 10',
+    time: '13:00',
+    mts: '1.20',
+    mm: '2.96',
+    status: 'corre gray',
+    ss: '12',
+    degree: '242',
+  },
+];
+
 import { ref } from 'vue';
 const items = ref([
   {
