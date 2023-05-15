@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        'headblue': '#1C496B',
+        'headblue': '#1C496B', 
         'white': '#ffffff',
         'purple': '#3f3cbb',
         'midnight': '#121063',
@@ -29,6 +29,8 @@ module.exports = {
         'dblue' : '#557790',
         'textgr': '#3C3C3B',
         'inputgr': '#E5E5E5',
+        'core': '#c4c4c4',
+        
 
 
 
