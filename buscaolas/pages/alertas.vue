@@ -1,9 +1,10 @@
 <script setup>
+const club = [1, 2, 3];
 </script>
 
 <template>
     <Header />
-    <div class="bg-neutral-200">
+    <div class="">
 
         <div class="mx-auto w-9/12">
             <div class="flex mx-auto w-full">
@@ -77,7 +78,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <!--Vertical Divider-->
                 <div class="border-2 border-r-zinc-500 lg:h-11/12 mx-auto lg:my-16"></div>
@@ -87,7 +88,67 @@
                     <div class="ml-0 w-full lg:mt-16 lg:mb-5 ">
                         <p class="uppercase text-[#1C496B] font-bold text-5xl">Últimos Artículos </p>
                     </div>
-
+                    <div class="mt-20">
+                        <ul>
+                            <li class="pb-14">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span
+                                            class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r m a s
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pb-14 mt-10">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span
+                                            class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r m a s
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pb-14 mt-10">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span
+                                            class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r m a s
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
@@ -123,10 +184,39 @@
                     <div class="border-2 border-t-zinc-700 w-full lg:mr-10 mt-0 lg:my-20"></div>
                 </div>
             </div>
+
+            <span class="text-headblue text-4xl font-black uppercase">Noticias <br> relacionadas</span>
+            <div class="grid grid-cols-3 gap-5 mx-auto mt-16 mb-16">
+                <div class="" v-for="(c, i) in club" :key="i">
+                    <img src="~/assets/thumbnails/image.jpg" class="object-cover h-48 w-full ..." />
+                    <div class="flex">
+                        <p
+                            class="w-1/2 font-bold text-xs text-center uppercase text-white bg-skyblue tracking-widest pt-0.5">
+                            categoria</p>
+                        <p class="w-1/2 text-sm text-center uppercase text-brown">hace</p>
+                    </div>
+                    <h1 class="font-bold text-2xl lg:w-80 w-full text-textgr block mb-2 uppercase">Lorem Ipsum is simply
+                        dummy text of the printing and typesetting industry.</h1>
+                    <p class="text-textgr text-sm">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's...</p>
+
+                    <div class="float-right tracking-widest benefits ">
+                        <button
+                            class="lg:font-bold w-40 p-2 mx-auto text-skyblue uppercase rounded-sm text-center lg:text-sm text-xs">
+                            LEER MAS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <Footer />
 </template>
 
-<style scoped></style>
+<style scoped>
+.benefits {
+    border: 1px solid #00A99D;
+}
+</style>

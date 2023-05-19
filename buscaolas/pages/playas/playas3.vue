@@ -103,12 +103,15 @@ const club = [
   },
 ];
 
+
+
 import { ref } from 'vue';
 const items = ref([
   {
     question: 'REPORTE Martes',
     answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
+    active: false,
+    color: 'warning'
   },
   {
     question: 'REPORTE Miércoles',
@@ -263,28 +266,41 @@ function toggleActive(index) {
             <img src="~/assets/icons/carret-left.png" class="h-11 w-5" />
           </NuxtLink>
         </span>
-        <ul class="flex justify-evenly">
-          <li>
+        <ul class="flex justify-evenly w-11/12 mx-auto">
+          <li class="mx-2" v-for="(c, i) in club" :key="i">
             <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
+              <div class="text-textgr w-16 h-20 text-center pt-5">
                 <span class="block mx-auto mb-1">
                   <NuxtLink to="/">
                     <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
                   </NuxtLink>
                 </span>
-                <span class="font-bold text-sm text-center uppercase">09:00</span>
+                <span class=" font-bold text-sm text-center uppercase">{{ c.time }}</span>
               </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-textgr">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 w-7/12">Regular</span>
+              <div class="flex items-center uppercase text-center text-white font-bold text-sm w-16 h-20" :class="[{ 'bg-textgr': c.status === 'regular' },
+              { 'bg-headblue': c.status === 'corre blue' },
+              { 'bg-core': c.status === 'corre gray' },
+              { 'bg-skyblue': c.status === 'corre skyblue' },
+              { 'bg-orangee': c.status === 'buena' },
+              { 'opacity-60': c.opacity === 60 },
+
+              ]">
+                <span class="my-10 w-full" :class="[{ 
+                  'text-xs': c.status === 'regular' },
+                { 'px-2 text-xs': c.status === 'corre blue' },
+                { 'px-2 text-xs': c.status === 'corre gray' },
+                { 'px-2 text-xs': c.status === 'corre skyblue' },
+                
+                ]">{{ c.title }}</span>
               </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
+              <div class="w-16 h-52 bg-headblue m-0 border border-t-white text-white text-center">
                 <span>
                   <span class="block mx-auto mt-5 mb-3">
                     <NuxtLink to="/">
                       <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
                     </NuxtLink>
                   </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
+                  <span class="font-bold text-xs text-center uppercase text-white">{{ c.mts }} mts</span>
                 </span>
                 <span>
                   <span class=" block mx-auto mt-5">
@@ -294,504 +310,13 @@ function toggleActive(index) {
                   </span>
                   <span class="font-bold text-xs text-center uppercase text-white">
                     <span class="block mt-3 mb-1">
-                      2.96m
+                      {{ c.mm }}m
                     </span>
                     <span class="block my-1">
-                      12s
+                      {{ c.ss }}s
                     </span>
                     <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">10:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-orangee">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  buena
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-headblue">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 2 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class="block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">09:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-textgr">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 w-7/12">Regular</span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class="block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-core">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 5 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-skyblue">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 6 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class="block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">09:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-textgr">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 w-7/12">Regular</span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class="block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">10:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-orangee">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  buena
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-headblue">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 2 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-textgr">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  regular
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-core">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 2 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div>
-              <div class="text-textgr w-20 h-20 text-center pt-5">
-                <span class=" block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">11:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs relative w-20 h-20 bg-skyblue">
-                <span class="absolute -translate-x-1/2 -translate-y-1/2 transform left-1/2 top-1/2 w-7/12">
-                  corre 2 de 10
-                </span>
-              </div>
-              <div class="w-20 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class=" block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class=" font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
+                      {{ c.degree }}˚
                     </span>
                   </span>
                 </span>
@@ -807,7 +332,7 @@ function toggleActive(index) {
       </div>
     </div>
 
-    <div class="w-8/12 mx-auto mt-15 mb-15">
+    <div class="w-8/12 mx-auto my-5 ">
       <div class="text-2xl w-9/12 text-headblue font-bold uppercase pb-1 border-b border-textgr leading-9">
         MAREAS
       </div>
@@ -953,7 +478,24 @@ function toggleActive(index) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
-          <img class="pt-5" src="~assets/thumbnails/like.png" alt="like">
+          <div class="mt-2.5">
+            <div class="float-left flex ml-3">
+              <span class="rounded-sm w-52 h-6 uppercase font-bold bg-orangee text-base text-white text-center">
+                Ver pronostico region
+              </span>
+            </div>
+            <div class="flex float-right mr-10 ml-5">
+              <NuxtLink to="/">
+                <img src="~/assets/icons/like.png" class="h-5 w-5 block mr-2" />
+              </NuxtLink>
+              <span class="font-bold text-xs uppercase text-textgr mt-1">525</span>
+              <span class="flex ml-5">
+                <NuxtLink to="/">
+                  <img src="~/assets/icons/unlike.png" class="h-5 w-5 block mr-2 ml-3 mt-1" />
+                </NuxtLink>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <div>
@@ -978,28 +520,27 @@ function toggleActive(index) {
       </div>
     </div>
 
-    <div class="w-9/12 mx-auto pb-10 mt-10">
-      <hr class=" my-4 bg-headblue border-black rounded ">
+    <div class="w-9/12 mx-auto pb-10">
+      <hr class="my-4 bg-headblue border-black rounded mt-10 mb-10">
       <p class="font-bold text-3xl text-headblue uppercase text-center">Reporte semanal</p>
     </div>
-    <div class="w-9/12 mx-auto item-center">
+    <div class="w-9/12 mx-auto item-center mb-10">
       <img class="mx-auto" src="~assets/thumbnails/semanal.png" alt="semanal">
     </div>
-
     <div class="paa-container mx-auto w-9/12 pt-5">
       <ul class="paa-list border-t border-b border-blue-500">
-        <li v-for="(item, index) in items" :key="index" class="paa-item border-t border-blue-500" :class="{
+        <li v-for="(item, index) in items" :key="index" class="paa-item border-t border-blue-500 flex" :class="{
           'border-t': index > 0,
           'border-b': index < items.length - 1
         }">
-          <div class="paa-question font-bold text-headblue text-2xl" @click="toggleActive(index)">
-            {{ item.question }}
-          </div>
-          <span class="mt-5 mr-5">
+          <span class="my-auto mr-5">
             <NuxtLink to="/">
               <img src="~/assets/icons/arrow-down-yellow.png" class="h-5 w-6" />
             </NuxtLink>
           </span>
+          <div class="paa-question font-bold text-headblue text-2xl" @click="toggleActive(index)">
+            {{ item.question }}
+          </div>
           <div ref="answer" class="paa-answer text-headblue text-2xl"
             :class="{ block: item.active, hidden: !item.active }">
             {{ item.answer }}
@@ -1007,22 +548,6 @@ function toggleActive(index) {
         </li>
       </ul>
     </div>
-
-    <!-- reporte semanal in reference
-    <div class="w-9/12 mx-auto my-14">
-      <ul class="border-blue">
-        <li class="" v-for="(day, index) in days" :key="index">
-          <div class="block w-full border-blue h-12">
-            <div class="flex">
-              <span class="carret-down mt-5 mr-5"></span>
-              <span class="uppercase pt-2.5 text-blue text-lg">
-                REPORTE <span class="font-bold">{{ day.name }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div> -->
 
     <div class="w-9/12 mx-auto mb-10 mt-16">
       <p class="font-bold text-3xl text-headblue uppercase">COMENTARIOS DESTACADOS</p>
@@ -1122,8 +647,10 @@ function toggleActive(index) {
           <NuxtLink to="/">
             <img src="~/assets/icons/comment-white.png" class="h-6 w-6 block mt-2 mr-4" />
           </NuxtLink>
-          <span
-            class="bg-white rounded-full text-black white-circle my-1 p-1 mx-2 text-center font-bold text-xs">525</span>
+          <div class="bg-white rounded-full my-auto px-0.5 mx-2">
+            <span
+            class="text-black white-circle text-center font-bold text-xs">525</span>
+          </div>
           <span class="font-bold text-sm text-white text-center mt-2.5">
             COMENTARIOS
           </span>

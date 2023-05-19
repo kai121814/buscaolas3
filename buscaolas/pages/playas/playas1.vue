@@ -1,150 +1,8 @@
 <script setup>
-const club = [
-  {
-    title: 'regular',
-    time: '9:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'regular',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'buena',
-    time: '10:00',
-    mts: '10:00',
-    mm: '2.96',
-    status: 'buena',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'corre 2 de 10',
-    time: '11:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'corre blue',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'regular',
-    time: '12:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'regular',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'corre 5 de 10',
-    time: '13:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'corre gray',
-    ss: '12',
-    degree: '242',
-  },
-  
-  {
-    title: 'corre 6 de 10',
-    time: '14:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'corre skyblue',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'regular',
-    time: '09:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'regular',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'buena',
-    time: '10:00',
-    mts: '10:00',
-    mm: '2.96',
-    status: 'buena',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'corre 2 de 10',
-    time: '11:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'corre blue',
-    ss: '12',
-    degree: '242',
-    opacity: 60
-  },
-  {
-    title: 'regular',
-    time: '12:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'regular',
-    ss: '12',
-    degree: '242',
-  },
-  {
-    title: 'corre 5 de 10',
-    time: '13:00',
-    mts: '1.20',
-    mm: '2.96',
-    status: 'corre gray',
-    ss: '12',
-    degree: '242',
-  },
-];
 
-
-
-import { ref } from 'vue';
-const items = ref([
-  {
-    question: 'REPORTE Martes',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false,
-    color: 'warning'
-  },
-  {
-    question: 'REPORTE Miércoles',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
-  },
-  {
-    question: 'REPORTE Jueves',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
-  },
-  {
-    question: 'REPORTE Viernes',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
-  },
-  {
-    question: 'REPORTE Sábado',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
-  },
-  {
-    question: 'REPORTE Domingo',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu vestibulum erat. Pellentesque quis consectetur tellus, sit amet posuere tortor. Suspendisse nec venenatis eros. Proin sed massa orci. Vestibulum in placerat nisi. Mauris tincidunt, augue ut bibendum viverra, nulla eros egestas orci, et malesuada quam tortor et mauris. Vivamus condimentum tortor at purus maximus, a accumsan sapien venenatis. Integer at tincidunt erat, sit amet faucibus dolor. Morbi pellentesque lorem ac arcu tincidunt consectetur et vel nisl. Phasellus placerat erat non nulla dapibus sollicitudin. Duis sed lacus tempor, vehicula tortor in, finibus dui. Sed egestas felis justo, at laoreet arcu porta non. Cras nibh augue, dapibus nec nunc et, rhoncus blandit libero. Vivamus faucibus, nulla ac venenatis facilisis, nunc nulla tempus massa, ut dignissim augue justo ut turpis. Nam bibendum auctor nisi.',
-    active: false
-  },
-]);
-function toggleActive(index) {
-  items.value[index].active = !items.value[index].active;
-}
 </script>
 <template>
-  <div>
+    <div>
     <div class="overflow">
       <Header />
     </div>
@@ -187,53 +45,7 @@ function toggleActive(index) {
         </div>
       </div>
     </div>
-    <div class="flex mx-auto container w-9/12 py-10">
-      <div class="actual border-t-2 border-orange-500 w-full items-center">
-        <div class="flex">
-          <div class=" bg-orange-500 px-5 text-white">
-            Actualizacion
-          </div>
-          <div class="pl-5">
-            Junio 28, 2021 14:00
-          </div>
-        </div>
-        <div class="pt-10">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.esktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <div class="flex mx-auto container w-9/12 py-10">
-      <div class="actual border-t-2 border-orange-500 w-full items-center">
-        <div class="flex">
-          <div class=" bg-orange-500 px-5 text-white">
-            Actualizacion
-          </div>
-          <div class="pl-5">
-            Junio 28, 2021 10:00
-          </div>
-        </div>
-        <div class="pt-10">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.esktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </div>
-    </div>
 
     <div class="flex mx-auto container w-9/12 py-10">
       <div class="text-headblue">
@@ -313,123 +125,8 @@ function toggleActive(index) {
       </div>
     </div>
 
-    <div class="w-9/12 mx-auto mt-10 mb-10">
-      <div class="relative">
-        <span class=" absolute translate-y-1/2 transform top-1/2 ">
-          <NuxtLink to="/">
-            <img src="~/assets/icons/carret-left.png" class="h-11 w-5" />
-          </NuxtLink>
-        </span>
-        <ul class="flex justify-evenly w-11/12 mx-auto">
-          <li class="mx-2" v-for="(c, i) in club" :key="i">
-            <div>
-              <div class="text-textgr w-16 h-20 text-center pt-5">
-                <span class="block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class=" font-bold text-sm text-center uppercase">{{ c.time }}</span>
-              </div>
-              <div class="flex items-center uppercase text-center text-white font-bold text-sm w-16 h-20" :class="[{ 'bg-textgr': c.status === 'regular' },
-              { 'bg-headblue': c.status === 'corre blue' },
-              { 'bg-core': c.status === 'corre gray' },
-              { 'bg-skyblue': c.status === 'corre skyblue' },
-              { 'bg-orangee': c.status === 'buena' },
-              { 'opacity-60': c.opacity === 60 },
+    <div>
 
-              ]">
-                <span class="my-10 w-full" :class="[{ 
-                  'text-xs': c.status === 'regular' },
-                { 'px-2 text-xs': c.status === 'corre blue' },
-                { 'px-2 text-xs': c.status === 'corre gray' },
-                { 'px-2 text-xs': c.status === 'corre skyblue' },
-                
-                ]">{{ c.title }}</span>
-              </div>
-
-              <div class="w-16 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class="block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">{{ c.mts }} mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      {{ c.mm }}m
-                    </span>
-                    <span class="block my-1">
-                      {{ c.ss }}s
-                    </span>
-                    <span class="block my-1">
-                      {{ c.degree }}˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li>
-
-          <!-- <li>
-            <div>
-              <div class="text-textgr w-16 h-20 text-center pt-5">
-                <span class="block mx-auto mb-1">
-                  <NuxtLink to="/">
-                    <img src="~/assets/icons/clock.png" class="w-5 h-5 mx-auto" />
-                  </NuxtLink>
-                </span>
-                <span class="font-bold text-sm text-center uppercase">09:00</span>
-              </div>
-              <div class="uppercase text-center text-white font-bold text-xs w-16 h-20 bg-skyblue ">
-                <span class="absolute my-10 -translate-x-1/2 -translate-y-1/2 w-7/12">corre <br>5 de 10</span>
-              </div>
-
-              <div class="w-16 h-52 bg-headblue m-0 border border-t-white text-white text-center">
-                <span>
-                  <span class="block mx-auto mt-5 mb-3">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/wave.png" class="w-7 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">1.20 mts</span>
-                </span>
-                <span>
-                  <span class=" block mx-auto mt-5">
-                    <NuxtLink to="/">
-                      <img src="~/assets/icons/water.png" class="w-6 h-5 mx-auto" />
-                    </NuxtLink>
-                  </span>
-                  <span class="font-bold text-xs text-center uppercase text-white">
-                    <span class="block mt-3 mb-1">
-                      2.96m
-                    </span>
-                    <span class="block my-1">
-                      12s
-                    </span>
-                    <span class="block my-1">
-                      242˚
-                    </span>
-                  </span>
-                </span>
-              </div>
-            </div>
-          </li> -->
-        </ul>
-        <span class=" absolute translate-y-1/2 transform top-1/2 right-0">
-          <NuxtLink to="/">
-            <img src="~/assets/icons/carret-right.png" class="h-11 w-5" />
-          </NuxtLink>
-        </span>
-      </div>
     </div>
 
     <div class="w-8/12 mx-auto my-5 ">
@@ -578,7 +275,24 @@ function toggleActive(index) {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
-          <img class="pt-5" src="~assets/thumbnails/like.png" alt="like">
+          <div class="mt-2.5">
+            <div class="float-left flex ml-3">
+              <span class="rounded-sm w-52 h-6 uppercase font-bold bg-orangee text-base text-white text-center">
+                Ver pronostico region
+              </span>
+            </div>
+            <div class="flex float-right mr-10 ml-5">
+              <NuxtLink to="/">
+                <img src="~/assets/icons/like.png" class="h-5 w-5 block mr-2" />
+              </NuxtLink>
+              <span class="font-bold text-xs uppercase text-textgr mt-1">525</span>
+              <span class="flex ml-5">
+                <NuxtLink to="/">
+                  <img src="~/assets/icons/unlike.png" class="h-5 w-5 block mr-2 ml-3 mt-1" />
+                </NuxtLink>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <div>
@@ -610,7 +324,6 @@ function toggleActive(index) {
     <div class="w-9/12 mx-auto item-center mb-10">
       <img class="mx-auto" src="~assets/thumbnails/semanal.png" alt="semanal">
     </div>
-
     <div class="paa-container mx-auto w-9/12 pt-5">
       <ul class="paa-list border-t border-b border-blue-500">
         <li v-for="(item, index) in items" :key="index" class="paa-item border-t border-blue-500 flex" :class="{
@@ -625,7 +338,6 @@ function toggleActive(index) {
           <div class="paa-question font-bold text-headblue text-2xl" @click="toggleActive(index)">
             {{ item.question }}
           </div>
-
           <div ref="answer" class="paa-answer text-headblue text-2xl"
             :class="{ block: item.active, hidden: !item.active }">
             {{ item.answer }}
@@ -633,22 +345,6 @@ function toggleActive(index) {
         </li>
       </ul>
     </div>
-
-    <!-- reporte semanal in reference
-    <div class="w-9/12 mx-auto my-14">
-      <ul class="border-blue">
-        <li class="" v-for="(day, index) in days" :key="index">
-          <div class="block w-full border-blue h-12">
-            <div class="flex">
-              <span class="carret-down mt-5 mr-5"></span>
-              <span class="uppercase pt-2.5 text-blue text-lg">
-                REPORTE <span class="font-bold">{{ day.name }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div> -->
 
     <div class="w-9/12 mx-auto mb-10 mt-16">
       <p class="font-bold text-3xl text-headblue uppercase">COMENTARIOS DESTACADOS</p>
@@ -749,8 +445,7 @@ function toggleActive(index) {
             <img src="~/assets/icons/comment-white.png" class="h-6 w-6 block mt-2 mr-4" />
           </NuxtLink>
           <div class="bg-white rounded-full my-auto px-0.5 mx-2">
-            <span
-            class="text-black white-circle text-center font-bold text-xs">525</span>
+            <span class="text-black white-circle text-center font-bold text-xs">525</span>
           </div>
           <span class="font-bold text-sm text-white text-center mt-2.5">
             COMENTARIOS
@@ -764,32 +459,4 @@ function toggleActive(index) {
   <Footer />
 </template>
 
-<style>
-.commentbox {
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.paa-item.active .paa-answer {
-  display: block;
-}
-
-.paa-list {
-  border-top: 1px solid #1C496B;
-  border-bottom: 2px solid#1C496B;
-}
-
-.paa-item {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.paa-question {
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: background-color .25s ease-in-out;
-}
-
-.paa-question:hover {
-  background-color: #ccd9e3;
-}
-</style>
+<style></style>

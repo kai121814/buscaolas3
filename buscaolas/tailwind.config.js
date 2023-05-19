@@ -30,6 +30,7 @@ module.exports = {
         'textgr': '#3C3C3B',
         'inputgr': '#E5E5E5',
         'core': '#c4c4c4',
+        'redd': '#C8142E',
         
 
 
