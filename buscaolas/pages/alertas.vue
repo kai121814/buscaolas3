@@ -77,7 +77,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <!--Vertical Divider-->
                 <div class="border-2 border-r-zinc-500 lg:h-11/12 mx-auto lg:my-16"></div>
@@ -87,7 +87,64 @@
                     <div class="ml-0 w-full lg:mt-16 lg:mb-5 ">
                         <p class="uppercase text-[#1C496B] font-bold text-5xl">Últimos Artículos </p>
                     </div>
-
+                    <div class="mt-20">
+                        <ul>
+                            <li class="pb-14">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r      m a s
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pb-14 mt-10">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r      m a s
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="pb-14 mt-10">
+                                <div class="">
+                                    <div class="flex uppercase border-t border-[#00A99D] w-full">
+                                        <span class="bg-[#00A99D] blue-green-text w-1/2 text-center font-bold text-sm text-white uppercase">
+                                            categoria 1
+                                        </span>
+                                        <span class="text-sm pl-3 gray w-1/2 text-center">
+                                            junio 25, 2023
+                                        </span>
+                                    </div>
+                                    <p class="gray font-bold text-sm uppercase my-5">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    </p>
+                                    <p class="font-bold text-xs uppercase text-[#00A99D] tracking-wider float-right">
+                                        l e e r      m a s
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
